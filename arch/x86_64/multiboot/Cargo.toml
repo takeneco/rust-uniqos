@@ -1,0 +1,31 @@
+[package]
+name = "multiboot"
+version = "0.1.0"
+authors = ["KATO Takeshi <takeneco@users.sourceforge.jp>"]
+edition = "2018"
+build = "build/build.rs"
+
+[features]
+#default = ["boot_multiboot2"]
+boot_multiboot2 = ["multiboot2"]
+
+[build-dependencies]
+cc = { version = "1.0.25", features = ["parallel"] }
+
+[dependencies]
+#basic = { path = "../basic" }
+#bootloader = "0.3.4"
+multiboot2 = { version = "0.8.1", optional = true }
+bootinfo = { path = "../bootinfo" }
+util = { path = "../../../util", features = ["nobox"] }
+
+#[dependencies.util]
+#path = "../../../util"
+#features = ["nobox"]
+
+[package.metadata.cargo-xbuild]
+memcpy = true
+
+[package.metadata.bootimage]
+default-target = "i686-uniqos.json"
+

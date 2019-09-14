@@ -1,0 +1,8 @@
+[package]
+name = "x86_64"
+version = "0.1.0"
+authors = ["KATO Takeshi <takeneco@users.sourceforge.jp>"]
+edition = "2018"
+workspace = "../.."
+
+[dependencies]

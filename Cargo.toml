@@ -1,0 +1,19 @@
+[package]
+name = "uniqos"
+version = "0.1.0"
+#authors = ["KATO Takeshi <takeneco@users.sourceforge.jp>"]
+#edition = "2018"
+
+[features]
+boot_multiboot2 = []
+
+[dependencies]
+x86_64 = { path = "arch/x86_64" }
+
+[target.'cfg(multiboot)'.dependencies]
+multiboot = { path = "arch/x86_64/multiboot" }
+
+
+[workspace]
+members = ["util", "arch/x86_64/multiboot"]
+

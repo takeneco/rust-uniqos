@@ -1,0 +1,9 @@
+BUILDMODE = 'debug'
+DEFAULT_TARGET = 'target/uniqos.iso'
+MAPFILE = False
+
+boot_multiboot2 = True
+BOOTIMAGE = False
+
+GRUB2_MOD_PATH = '/usr/lib/grub/i386-pc'
+GRUB2_MKIMAGE = 'grub2-mkimage'
